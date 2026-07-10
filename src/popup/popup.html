@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Price Watch</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="popup-header">
+        <div>
+          <h1>Price Watch</h1>
+          <p id="summary">Loading tracked products...</p>
+        </div>
+        <button id="refresh-now" class="icon-button" title="Refresh prices now" type="button" aria-label="Refresh prices now">
+          <span aria-hidden="true">&#8635;</span>
+        </button>
+      </header>
+
+      <section id="message" class="message" hidden></section>
+      <section id="products" class="product-list" aria-live="polite"></section>
+      <section id="empty" class="empty" hidden>
+        <h2>No products tracked yet</h2>
+        <p>Amazon and Flipkart product pages will appear here.</p>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

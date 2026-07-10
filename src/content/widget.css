@@ -1,0 +1,147 @@
+#local-price-watch-widget {
+  box-sizing: border-box;
+  width: min(100%, 440px);
+  margin: 14px 0;
+  padding: 12px;
+  border: 1px solid #d6dde8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #162033;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.10);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.35;
+}
+
+#local-price-watch-widget *,
+#local-price-watch-widget *::before,
+#local-price-watch-widget *::after {
+  box-sizing: border-box;
+}
+
+#local-price-watch-widget .lpw-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+#local-price-watch-widget .lpw-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+#local-price-watch-widget .lpw-subtitle {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+#local-price-watch-widget .lpw-status {
+  flex: 0 0 auto;
+  min-height: 24px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e8f5ef;
+  color: #126b45;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#local-price-watch-widget .lpw-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#local-price-watch-widget .lpw-stat {
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #e4eaf2;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+#local-price-watch-widget .lpw-stat-label {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+}
+
+#local-price-watch-widget .lpw-stat-value {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #162033;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#local-price-watch-widget .lpw-chart-wrap {
+  min-height: 96px;
+  border: 1px solid #e4eaf2;
+  border-radius: 6px;
+  background: #fbfdff;
+  overflow: hidden;
+}
+
+#local-price-watch-widget .lpw-chart {
+  display: block;
+  width: 100%;
+  height: 96px;
+}
+
+#local-price-watch-widget .lpw-grid {
+  stroke: #dbe4ef;
+  stroke-width: 1;
+}
+
+#local-price-watch-widget .lpw-area {
+  fill: rgba(16, 129, 111, 0.13);
+}
+
+#local-price-watch-widget .lpw-line {
+  fill: none;
+  stroke: #10816f;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+#local-price-watch-widget .lpw-chart-label {
+  fill: #64748b;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+#local-price-watch-widget .lpw-empty-chart {
+  display: flex;
+  min-height: 96px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  color: #64748b;
+  font-size: 12px;
+  text-align: center;
+}
+
+#local-price-watch-widget .lpw-error {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  background: #fff7ed;
+  color: #9a3412;
+  font-size: 12px;
+}
+
+@media (max-width: 520px) {
+  #local-price-watch-widget {
+    width: 100%;
+  }
+
+  #local-price-watch-widget .lpw-stats {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Local Price Watch",
+  "version": "0.1.2",
+  "description": "Track Amazon and Flipkart product price history locally.",
+  "permissions": [
+    "alarms",
+    "offscreen",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.amazon.com/*",
+    "https://*.amazon.com/*",
+    "https://www.amazon.in/*",
+    "https://*.amazon.in/*",
+    "https://www.flipkart.com/*",
+    "https://*.flipkart.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*",
+        "https://*.amazon.com/*",
+        "https://www.amazon.in/*",
+        "https://*.amazon.in/*",
+        "https://www.flipkart.com/*",
+        "https://*.flipkart.com/*"
+      ],
+      "js": [
+        "src/shared/site-adapters.js",
+        "src/content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Local Price Watch"
+  }
+}
