@@ -35,10 +35,20 @@ Site-specific parsing lives in [`src/shared/site-adapters.js`](src/shared/site-a
 
 The extension will create a local tracking entry and inject the on-page chart widget.
 
+## Screenshots
+
+| Product page widget | Popup dashboard |
+| --- | --- |
+| ![Local Price Watch injected on an Amazon product page](docs/screenshots/product-page-widget.png) | ![Local Price Watch popup dashboard showing tracked products](docs/screenshots/popup-dashboard.png) |
+
 ## Project Structure
 
 ```text
 manifest.json
+docs/
+  screenshots/
+    product-page-widget.png
+    popup-dashboard.png
 src/
   background/
     service-worker.js   # alarms, storage, scheduled refresh, offscreen parsing
